@@ -16,7 +16,7 @@ export default function Home() {
       <div className='h-screen w-screen border-2 border-red-400'>
         <section className='m-auto h-fit w-fit'>
           <Suspense fallback={<p>Loading video...</p>}>
-          <video loop autoPlay muted>
+          <video loop autoPlay muted playsInline>
             <source src='https://ryanidc.s3.ap-southeast-1.amazonaws.com/idc.mp4' type='video/mp4' />
             Your browser does not support the video tag.
           </video>
