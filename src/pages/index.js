@@ -14,8 +14,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className='h-screen w-screen border-2 border-red-400'>
-        <section className='m-auto  w-fit'>
+      <div className='grid grid-cols-2'>
+        <section className='m-auto w-fit'>
           <Suspense fallback={<Loading />}>
             <video loop autoPlay muted playsInline>
               <source src='https://ryanidc.s3.ap-southeast-1.amazonaws.com/idc.mp4' type='video/mp4' />
@@ -23,6 +23,7 @@ export default function Home() {
             </video>
           </Suspense>
         </section>
+        <section>Description</section>
       </div>
     </>
   )
