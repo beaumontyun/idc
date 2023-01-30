@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
             <Header />
             <div className="grid grid-cols-3">
                 <div className="flex h-full flex-col justify-between">
-                    <div className="flex flex-col gap-3 font-bold">
+                    <div className="flex flex-col gap-3 font-bold text-2xl">
                         <Link href="/">what we do.</Link>
                         <Link href="/approach">our approach.</Link>
                         <Link href="/contact">contact.</Link>

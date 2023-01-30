@@ -17,13 +17,13 @@ export default function Home() {
       <div className='grid grid-cols-2'>
         <section className='m-auto w-fit'>
           <Suspense fallback={<Loading />}>
-            <video loop autoPlay muted playsInline>
+            <video loop autoPlay muted playsInline className='rounded-lg w-[386px] h-[687]'>
               <source src='https://ryanidc.s3.ap-southeast-1.amazonaws.com/idc.mp4' type='video/mp4' />
               Your browser does not support the video tag.
             </video>
           </Suspense>
         </section>
-        <section>Description</section>
+        <section className='px-12'></section>
       </div>
     </>
   )
