@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import { Suspense } from 'react'
+import Loading from '@/components/loading'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,12 +15,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className='h-screen w-screen border-2 border-red-400'>
-        <section className='m-auto h-fit w-fit'>
-          <Suspense fallback={<p>Loading video...</p>}>
-          <video loop autoPlay muted playsInline>
-            <source src='https://ryanidc.s3.ap-southeast-1.amazonaws.com/idc.mp4' type='video/mp4' />
-            Your browser does not support the video tag.
-          </video>
+        <section className='m-auto  w-fit'>
+          <Suspense fallback={<Loading />}>
+            <video loop autoPlay muted playsInline>
+              <source src='https://ryanidc.s3.ap-southeast-1.amazonaws.com/idc.mp4' type='video/mp4' />
+              Your browser does not support the video tag.
+            </video>
           </Suspense>
         </section>
       </div>
