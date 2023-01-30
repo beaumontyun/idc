@@ -1,7 +1,6 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import Header from '@/components/Header'
+import { Suspense } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,15 +13,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className='h-screen w-screen border-2 border-red-400'>
-        {/* <Header /> */}
-        <div className='m-auto h-fit w-fit'>
+      <div className='h-screen w-screen border-2 border-red-400'>
+        <section className='m-auto h-fit w-fit'>
+          <Suspense fallback={<p>Loading video...</p>}>
           <video loop autoPlay muted>
             <source src='https://ryanidc.s3.ap-southeast-1.amazonaws.com/idc.mp4' type='video/mp4' />
             Your browser does not support the video tag.
           </video>
-        </div>
-      </main>
+          </Suspense>
+        </section>
+      </div>
     </>
   )
 }
