@@ -14,10 +14,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className='grid grid-cols-2'>
-        <section className='m-auto w-fit'>
+      <div className='grid grid-cols-2 border-2 border-red-500 '>
+        <section className='m-auto'>
           <Suspense fallback={<Loading />}>
-            <video loop autoPlay muted playsInline className='rounded-lg w-[386px] h-[687]'>
+            <video loop autoPlay muted playsInline className='w-full'>
               <source src='https://ryanidc.s3.ap-southeast-1.amazonaws.com/idc.mp4' type='video/mp4' />
               Your browser does not support the video tag.
             </video>

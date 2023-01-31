@@ -1,23 +1,27 @@
 import Header from "./Header";
 import Footer from "./footer";
 import Link from "next/link";
+import { Montserrat_Alternates } from '@next/font/google'
+
+const montserrat = Montserrat_Alternates({ subsets: ['latin'], weight: ['600'] })
 
 const Layout = ({ children }) => {
     return (
-        <div className="mx-10">
-            <Header />
-            <div className="grid grid-cols-3">
-                <div className="flex h-full flex-col justify-between">
-                    <div className="flex flex-col gap-3 font-bold text-2xl">
-                        <Link href="/">what we do.</Link>
-                        <Link href="/approach">our approach.</Link>
-                        <Link href="/contact">contact.</Link>
+        <div className="m-10 border-2 border-yellow-700">
+            <div className={montserrat.className}>
+                <Header />
+                <div className="grid grid-cols-3 border-2 border-sky-400 m-1 w-">
+                    <div className="flex flex-col justify-between border-2 border-green-400 m-1">
+                        <div className="flex flex-col gap-3 font-[600] text-2xl">
+                            <Link className="w-fit" href="/">what we do.</Link>
+                            <Link className="w-fit" href="/approach">our approach.</Link>
+                            <Link className="w-fit" href="/contact">contact.</Link>
+                        </div>
+                        <Footer />
                     </div>
-                    <Footer />
+                    <div className="col-span-2 m-1 border-2 border-pink-100">{children}</div>
                 </div>
-                <div className="col-span-2 min-h-[80vh]">{children}</div>
             </div>
-            
         </div>
     );
 }

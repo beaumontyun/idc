@@ -5,10 +5,10 @@ import Loading from "@/components/loading";
 
 const Approach = () => {
     return (
-        <div className="grid grid-cols-2">
-            <section className="mx-auto">
+        <div className="grid grid-cols-2 border-2 border-red-400">
+            <section className="">
                 <Suspense fallback={<Loading />}>
-                    <Image src={Logo} className="rounded-lg" />
+                    <Image src={Logo} className="mx-auto border-2 border-red-400 object-contain" />
                 </Suspense>
             </section>
             <section className="flex flex-col gap-3 px-12">
